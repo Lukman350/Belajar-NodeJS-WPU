@@ -1,5 +1,6 @@
 const http = require("http");
 const fs = require("fs");
+const port = 3000;
 
 const renderHTML = (path, res) => {
   fs.readFile(path, (err, data) => {
@@ -34,6 +35,6 @@ http
         break;
     }
   })
-  .listen(3000, () => {
-    console.log("Server is listening on port 3000...");
+  .listen(port, () => {
+    console.log(`Server is listening on port ${port}...`);
   });
